@@ -14,15 +14,75 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var MainMenuScroll: UIScrollView!
-    @IBOutlet weak var MainMenuViewController: UIScrollView!
+   
+
+    @IBOutlet var mainMenuViewController: UIView!
+    
+    @IBOutlet weak var MainMenuStack: UIStackView!
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
+    let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
+    
+    
+    
+    
+    
+    
+    
+   
+    let cellReuseID = "cell"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+       // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        
+        //view.backgroundColor = .blue
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
+        
+        return self.tableRowTitle.count
+
     }
 
+    
+    //cell for each row, customizations for each cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
+        
+        let cell:CustomCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseID) as! CustomCell
+        
+        cell.customView.backgroundColor = self.gameImage[indexPath.row]
+        cell.customCellLabel.text = self.tableRowTitle[indexPath.row]
+        
+        
+        //cell.textLabel?.text = self.tableRowTitle[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    
+    //action when button is tapped
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print ("selected row : \(indexPath.row)")
+    }
+    
+    
 
 }
 
+//Sources :
+//https://stackoverflow.com/questions/33234180/uitableview-example-for-swift
