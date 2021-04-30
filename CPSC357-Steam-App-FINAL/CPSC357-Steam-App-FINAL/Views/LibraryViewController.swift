@@ -1,26 +1,25 @@
 //
-//  ViewController.swift
+//  LibraryViewController.swift
 //  CPSC357-Steam-App-FINAL
 //
-//  Created by Kelsey Holland on 4/26/21.
+//  Created by Kelsey Holland on 4/29/21.
 //
 
+import Foundation
 import UIKit
 
 
 
 
-//View Controller Will be Main menu
+class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
-
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-   
-
-    @IBOutlet var mainMenuViewController: UIView!
     
-    @IBOutlet weak var MainMenuStack: UIStackView!
+    @IBOutlet var LibraryViewController: UIView!
+    
+    @IBOutlet weak var LibraryLabel: UILabel!
+    @IBOutlet weak var LibraryVerticalStackController: UIStackView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -29,14 +28,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
     let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
     
+    let rowCellReuseID = "cell"
     
-    
-    
-    
-    
-    
-   
-    let cellReuseID = "cell"
     
     
     override func viewDidLoad() {
@@ -51,6 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //view.backgroundColor = .blue
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         
         return self.tableRowTitle.count
@@ -61,10 +55,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //cell for each row, customizations for each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         
-        let cell:CustomCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseID) as! CustomCell
+        let cell:CustomLibraryCell = self.tableView.dequeueReusableCell(withIdentifier: rowCellReuseID) as! CustomLibraryCell
         
-        cell.customView.backgroundColor = self.gameImage[indexPath.row]
-        cell.customCellLabel.text = self.tableRowTitle[indexPath.row]
+        cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
+        cell.customLibraryCellLabel.text = self.tableRowTitle[indexPath.row]
         
         
         //cell.textLabel?.text = self.tableRowTitle[indexPath.row]
@@ -81,8 +75,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-
 }
 
-//Sources :
-//https://stackoverflow.com/questions/33234180/uitableview-example-for-swift
+
