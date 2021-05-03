@@ -24,6 +24,8 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    let gameslibrary = [GamesDetail]()
+    
     
     let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
     let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
