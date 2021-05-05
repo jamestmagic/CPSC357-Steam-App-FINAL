@@ -57,8 +57,8 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
                 self?.gameslibrary = games
             }
         }
-        for GamesDetail in gameslibrary {
-            print("Game ID: \(GamesDetail.name)")
+        for game in gameslibrary {
+            print("Game ID: \(game.name)")
         }
         tableView.delegate = self
         tableView.dataSource = self
