@@ -32,8 +32,8 @@ struct GameRequest{
             do{
                 let decoder = JSONDecoder()
                 let gamesResponse = try decoder.decode(GameResponse.self, from: jsonData)
-                let gameDetails = gamesResponse.response.games
-                completion(.success(gamesDetail))
+                let gameDetails = gamesResponse.response.library
+                completion(.success(gameDetails))
             }catch{
                 completion(.failure(.canNotProcessData))
             }

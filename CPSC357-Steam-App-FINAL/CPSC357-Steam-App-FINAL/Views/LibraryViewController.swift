@@ -24,7 +24,17 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    let gameslibrary = [GamesDetail]()
+    var gameslibrary = [GamesDetail](){
+        didSet{
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+                self.navigationItem.title = "\(self.gameslibrary.count) Games Found"
+            }
+        }
+    }
+    
+    
+    
     
     
     let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
@@ -38,7 +48,18 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view.
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
-        
+        let gameRequest = GameRequest(steamID64: "76561198184936923")
+        gameRequest.getGames { [weak self] result in
+            switch result{
+            case.failure(let error):
+                print(error)
+            case.success(let games):
+                self?.gameslibrary = games
+            }
+        }
+        for GamesDetail in gameslibrary {
+            print("Game ID: \(GamesDetail.name)")
+        }
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -49,7 +70,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         
-        return self.tableRowTitle.count
+        return self.gameslibrary.count
 
     }
 
@@ -59,8 +80,9 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell:CustomLibraryCell = self.tableView.dequeueReusableCell(withIdentifier: rowCellReuseID) as! CustomLibraryCell
         
+        let game = gameslibrary[indexPath.row]
         cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
-        cell.customLibraryCellLabel.text = self.tableRowTitle[indexPath.row]
+        cell.customLibraryCellLabel.text = game.name
         
         
         //cell.textLabel?.text = self.tableRowTitle[indexPath.row]
@@ -77,6 +99,10 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    
+    
+    
 }
+
 
 
