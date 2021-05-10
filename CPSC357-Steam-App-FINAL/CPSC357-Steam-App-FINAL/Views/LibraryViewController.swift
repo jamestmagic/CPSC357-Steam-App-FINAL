@@ -28,7 +28,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         didSet{
             DispatchQueue.main.async{
                 self.tableView.reloadData()
-                self.navigationItem.title = "\(self.gameslibrary.count) Games Found"
+                //self.navigationItem.title = "\(self.gameslibrary.count) Games Found"
             }
         }
     }
@@ -58,10 +58,11 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         for game in gameslibrary {
-            print("Game ID: \(game.name)")
+            print("Game ID: \(game.appid)")
         }
         tableView.delegate = self
         tableView.dataSource = self
+        //searchBar.delegate = self
         
         
         //view.backgroundColor = .blue
@@ -81,14 +82,13 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell:CustomLibraryCell = self.tableView.dequeueReusableCell(withIdentifier: rowCellReuseID) as! CustomLibraryCell
         
         let game = gameslibrary[indexPath.row]
-        cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
-        cell.customLibraryCellLabel.text = game.name
+        //cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
+        //cell.customLibraryCellLabel.text = game.appid
         
         
-        //cell.textLabel?.text = self.tableRowTitle[indexPath.row]
-        
+        cell.textLabel?.text = String(game.appid)
+        cell.detailTextLabel?.text = String(game.playtime_forever)
         return cell
-        
     }
     
     
@@ -103,6 +103,20 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
 }
-
-
+/*
+extension LibraryViewController : UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        guard let searchBarText = searchBar.text else {return}
+        let gameRequest = GameRequest(steamID64: "76561198184936923")
+        gameRequest.getGames {[weak self] result in
+            switch result{
+            case .failure(let error):
+                print(error)
+            case .success(let games):
+                self?.gameslibrary = games
+            }
+        }
+    }
+}
+*/
 
