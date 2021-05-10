@@ -26,18 +26,32 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-gv-M19">
+                                        <rect key="frame" x="0.0" y="87" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qZ-eK-qPW">
-                                        <rect key="frame" x="0.0" y="87" width="414" height="30"/>
+                                        <rect key="frame" x="0.0" y="139.5" width="414" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="N3P-kr-MBu">
+<<<<<<< HEAD
                                         <rect key="frame" x="0.0" y="149" width="414" height="51"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-8x-u76">
                                         <rect key="frame" x="0.0" y="232" width="414" height="368"/>
+=======
+                                        <rect key="frame" x="0.0" y="201.5" width="414" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-8x-u76">
+                                        <rect key="frame" x="0.0" y="289.5" width="414" height="310.5"/>
+>>>>>>> 035a17d5e5f76f0a45d09f07d4db85e7427a0e53
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="f2i-Od-Uhj" customClass="CustomLibraryCell" customModule="CPSC357_Steam_App_FINAL" customModuleProvider="target">
@@ -91,6 +105,7 @@
                         <outlet property="LibraryViewController" destination="zTP-DY-qoe" id="Gur-y2-ATY"/>
                         <outlet property="searchBar" destination="N3P-kr-MBu" id="VqU-xj-aoo"/>
                         <outlet property="tableView" destination="wmW-8x-u76" id="Bym-8Z-kRY"/>
+                        <outlet property="testLabel" destination="2Pt-gv-M19" id="VSO-gh-hPd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfX-RZ-FNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 enum GameError: Error{
     case noDataAvailable
     case canNotProcessData
@@ -38,6 +39,7 @@ struct GameRequest{
                 print("gameDetails")
                 completion(.success(gameDetails))
             }catch{
+                //print("DECODER DIDNT WORK ")
                 completion(.failure(.canNotProcessData))
             }
         }
