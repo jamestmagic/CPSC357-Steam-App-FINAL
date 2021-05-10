@@ -25,7 +25,6 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-<<<<<<< HEAD
     var gameslibrary = [GamesDetail](){
         didSet{
             DispatchQueue.main.async{
@@ -35,9 +34,6 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    
-=======
->>>>>>> 035a17d5e5f76f0a45d09f07d4db85e7427a0e53
     
     
 
@@ -64,14 +60,11 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         for game in gameslibrary {
-<<<<<<< HEAD
             print("Game ID: \(game.appid)")
-=======
 //            print("Game ID: \(game.name)")
-            testLabel.text = ("Game ID: \(game.name)")
+            testLabel.text = ("Game ID: \(game.appid)")
         
             
->>>>>>> 035a17d5e5f76f0a45d09f07d4db85e7427a0e53
         }
         tableView.delegate = self
         tableView.dataSource = self
@@ -81,15 +74,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         //view.backgroundColor = .blue
     }
     
-    
-    var gameslibrary = [GamesDetail](){
-        didSet{
-            DispatchQueue.main.async{
-                self.tableView.reloadData()
-                self.navigationItem.title = "\(self.gameslibrary.count) Games Found"
-            }
-        }
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         
