@@ -21,21 +21,13 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var searchBar: UISearchBar!
     
     
+    @IBOutlet weak var testLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
-    var gameslibrary = [GamesDetail](){
-        didSet{
-            DispatchQueue.main.async{
-                self.tableView.reloadData()
-                self.navigationItem.title = "\(self.gameslibrary.count) Games Found"
-            }
-        }
-    }
     
     
-    
-    
+
     
     let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
     let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
@@ -52,13 +44,17 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         gameRequest.getGames { [weak self] result in
             switch result{
             case.failure(let error):
+                print("ERROR")
                 print(error)
             case.success(let games):
                 self?.gameslibrary = games
             }
         }
         for game in gameslibrary {
-            print("Game ID: \(game.name)")
+//            print("Game ID: \(game.name)")
+            testLabel.text = ("Game ID: \(game.name)")
+        
+            
         }
         tableView.delegate = self
         tableView.dataSource = self
@@ -67,6 +63,15 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         //view.backgroundColor = .blue
     }
     
+    
+    var gameslibrary = [GamesDetail](){
+        didSet{
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+                self.navigationItem.title = "\(self.gameslibrary.count) Games Found"
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         
