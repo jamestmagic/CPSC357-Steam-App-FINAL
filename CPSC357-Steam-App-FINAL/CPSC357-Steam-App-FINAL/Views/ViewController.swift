@@ -14,7 +14,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate{
 
    
 
@@ -27,6 +27,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -101,10 +116,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell:CustomCollectionCell = self.collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellReuseID, for: indexPath as IndexPath) as! CustomCollectionCell
         cell.customLabel.text = self.collectionViewTitle[indexPath.row]
         cell.backgroundColor = UIColor.orange
+    
         
         
         return cell
     }
+    
+    
+    
+    
+    
     
     
     //on click

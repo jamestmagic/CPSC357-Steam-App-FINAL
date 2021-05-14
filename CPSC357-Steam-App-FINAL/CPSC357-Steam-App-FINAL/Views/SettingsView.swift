@@ -15,6 +15,13 @@ import UIKit
     @IBOutlet weak var settingsViewController: UIView!
     
     @IBOutlet weak var settingsStackViewController: UIStackView!
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
