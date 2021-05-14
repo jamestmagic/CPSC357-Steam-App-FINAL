@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct gameDetails{
+struct Game{
     var gameName: String //name of the game
     var total_playtime: Int //how many hours were played by user in total
     var last_month_playtime: Int //how many hours were played by user within the last month
@@ -34,6 +34,6 @@ formatter.dateFormat = "yyyy/MM/dd HH"
 let date1 = formatter.date(from: "2016/10/08 15")
 let date2 = formatter.date(from: "2020/11/09 12")
 
-let game = gameDetails(gameName: "Hello", total_playtime: 100, last_month_playtime: 20, date_last_played: date2!, date_added: date1!)
+let game = Game(gameName: "Hello", total_playtime: 100, last_month_playtime: 20, date_last_played: date2!, date_added: date1!)
 
 */
