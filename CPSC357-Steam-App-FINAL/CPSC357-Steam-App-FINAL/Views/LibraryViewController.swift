@@ -25,7 +25,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    var gameslibrary = [GamesDetail](){
+    var gameslibrary = [GamesLibrary](){
         didSet{
             DispatchQueue.main.async{
                 self.tableView.reloadData()
@@ -60,9 +60,9 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         for game in gameslibrary {
-            print("Game ID: \(game.appid)")
+            print("Game ID: \(game.games[5].appid)")
 //            print("Game ID: \(game.name)")
-            testLabel.text = ("Game ID: \(game.appid)")
+            testLabel.text = ("Game ID: \(game.games[5].appid)")
         
             
         }
@@ -93,8 +93,8 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         //cell.customLibraryCellLabel.text = game.appid
         
         
-        cell.textLabel?.text = String(game.appid)
-        cell.detailTextLabel?.text = String(game.playtime_forever)
+        //cell.textLabel?.text = String(game.appid)
+        //cell.detailTextLabel?.text = String(game.playtime_forever)
         return cell
     }
     

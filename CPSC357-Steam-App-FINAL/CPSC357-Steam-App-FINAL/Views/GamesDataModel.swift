@@ -8,7 +8,7 @@
 import Foundation
 
 struct GameResponse: Decodable{
-    var response: GamesLibrary
+    var response: [GamesLibrary]
 }
 
 struct GamesLibrary: Decodable{
