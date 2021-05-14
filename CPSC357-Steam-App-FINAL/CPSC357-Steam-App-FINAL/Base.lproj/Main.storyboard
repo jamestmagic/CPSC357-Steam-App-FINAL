@@ -311,7 +311,7 @@
                                             <segue destination="JPe-sU-0mJ" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="w2j-IK-Fbz"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifh-5a-3BZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifh-5a-3BZ">
                                         <rect key="frame" x="142" y="127" width="131" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
@@ -352,47 +352,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Okk-0b-vFv">
-                                        <rect key="frame" x="8" y="0.0" width="397" height="881.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNT-Dt-3mK">
+                                        <rect key="frame" x="17" y="39" width="397" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Back" image="chevron.backward.circle" catalog="system">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="N1m-dE-b7x" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="3U9-wq-rnD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZz-GO-fzt">
+                                        <rect key="frame" x="17" y="77" width="397" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="chart.bar.fill" catalog="system" id="APo-Ja-prj">
+                                        <rect key="frame" x="8" y="140" width="397" height="288"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="Okk-0b-vFv">
+                                        <rect key="frame" x="10" y="736" width="397" height="325.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNT-Dt-3mK">
-                                                <rect key="frame" x="0.0" y="0.0" width="397" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Back" image="chevron.backward.circle" catalog="system">
-                                                    <color key="titleColor" name="AccentColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="N1m-dE-b7x" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="3U9-wq-rnD"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZz-GO-fzt">
-                                                <rect key="frame" x="0.0" y="30" width="397" height="54"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0il-uq-aV5">
-                                                <rect key="frame" x="0.0" y="84" width="397" height="300"/>
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-UC-Nt9">
-                                                <rect key="frame" x="0.0" y="384" width="397" height="300"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ui6-za-SPR">
-                                                <rect key="frame" x="0.0" y="684" width="397" height="39.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ui6-za-SPR">
+                                                <rect key="frame" x="0.0" y="0.0" width="397" height="39.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Heres Some Info about the Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9da-Da-Tp0">
-                                                <rect key="frame" x="0.0" y="723.5" width="397" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heres Some Info about the Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9da-Da-Tp0">
+                                                <rect key="frame" x="0.0" y="103.5" width="397" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pqv-aq-tde">
-                                                <rect key="frame" x="0.0" y="753.5" width="397" height="128"/>
+                                                <rect key="frame" x="0.0" y="197.5" width="397" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gse-RV-I8Y">
@@ -407,7 +404,20 @@
                                             </tableView>
                                         </subviews>
                                     </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="chart.pie" catalog="system" id="Icx-vq-gpd">
+                                        <rect key="frame" x="8" y="438" width="397" height="290"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                    </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="APo-Ja-prj" firstAttribute="top" secondItem="WZz-GO-fzt" secondAttribute="bottom" constant="8" id="D5l-JN-Knc"/>
+                                    <constraint firstItem="Icx-vq-gpd" firstAttribute="top" secondItem="APo-Ja-prj" secondAttribute="bottom" constant="8" id="KzP-TD-hvx"/>
+                                    <constraint firstItem="Okk-0b-vFv" firstAttribute="top" secondItem="Icx-vq-gpd" secondAttribute="bottom" constant="8" id="Te6-ry-7dK"/>
+                                    <constraint firstItem="WZz-GO-fzt" firstAttribute="top" secondItem="sNT-Dt-3mK" secondAttribute="bottom" constant="8" id="qnb-Xl-llo"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="anB-Vv-lkP"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="aXk-NB-fx6"/>
                                 <userDefinedRuntimeAttributes>
@@ -425,19 +435,20 @@
                         <outlet property="GameStackView" destination="Okk-0b-vFv" id="4RV-Li-rpf"/>
                         <outlet property="GameViewController" destination="hWv-v1-Iqe" id="xMn-EG-5B8"/>
                         <outlet property="gameTitleLabel" destination="WZz-GO-fzt" id="bio-Y9-N4U"/>
-                        <outlet property="placeholderView01" destination="0il-uq-aV5" id="d38-X6-fVS"/>
                         <outlet property="tableView" destination="pqv-aq-tde" id="Lif-7T-E4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKf-mX-YyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="N1m-dE-b7x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="226" y="140"/>
+            <point key="canvasLocation" x="224.63768115942031" y="139.95535714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
         <image name="books.vertical" catalog="system" width="128" height="103"/>
+        <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
+        <image name="chart.pie" catalog="system" width="128" height="121"/>
         <image name="chevron.backward.circle" catalog="system" width="128" height="121"/>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
