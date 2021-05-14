@@ -12,6 +12,7 @@ struct Game{
     var gameName: String //name of the game
     var total_playtime: Int //how many hours were played by user in total
     var last_month_playtime: Int //how many hours were played by user within the last month
+    var last_week_playtime: Int
     var date_last_played: Date //date the game was last played by user
     var date_added: Date //intial date when user added/purchased game to their library
     
