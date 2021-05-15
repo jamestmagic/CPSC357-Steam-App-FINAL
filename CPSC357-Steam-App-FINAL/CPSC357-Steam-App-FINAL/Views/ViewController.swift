@@ -36,17 +36,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    
+    /*
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy/MM/dd HH"
     let date1 = formatter.date(from: "2016/10/08 15")
     let date2 = formatter.date(from: "2020/11/09 12")
-    
+    */
+    /*
     var gamesLibrary = [Game]()
     
     let game1 = Game(gameName: "Hello", total_playtime: 100, last_month_playtime: 20, date_last_played: date2!, date_added: date1!)
     
-    
+    */
     
     
     

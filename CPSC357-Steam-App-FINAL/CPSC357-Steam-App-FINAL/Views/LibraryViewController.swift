@@ -24,7 +24,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var testLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
-    
+    /*
     var gameslibrary = [GamesLibrary](){
         didSet{
             DispatchQueue.main.async{
@@ -34,7 +34,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    
+    */
     
 
     
@@ -49,7 +49,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view.
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
-        let gameRequest = GameRequest(steamID64: "76561198184936923")
+        /*let gameRequest = GameRequest(steamID64: "76561198184936923")
         gameRequest.getGames { [weak self] result in
             switch result{
             case.failure(let error):
@@ -65,7 +65,8 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             testLabel.text = ("Game ID: \(game.games[5].appid)")
         
             
-        }
+        }*/
+        
         tableView.delegate = self
         tableView.dataSource = self
         //searchBar.delegate = self
@@ -78,7 +79,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         
-        return self.gameslibrary.count
+        return self.tableRowTitle.count
 
     }
 
@@ -88,7 +89,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell:CustomLibraryCell = self.tableView.dequeueReusableCell(withIdentifier: rowCellReuseID) as! CustomLibraryCell
         
-        let game = gameslibrary[indexPath.row]
+        //let game = gameslibrary[indexPath.row]
         //cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
         //cell.customLibraryCellLabel.text = game.appid
         

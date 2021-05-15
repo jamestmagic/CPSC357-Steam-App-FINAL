@@ -10,6 +10,7 @@
 		AA7D31502640977A001A3597 /* GamesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D314F2640977A001A3597 /* GamesDataModel.swift */; };
 		AA7D315326409A40001A3597 /* GameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D315226409A40001A3597 /* GameRequest.swift */; };
 		AAA82188264DECB70054F728 /* StatCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82187264DECB60054F728 /* StatCalc.swift */; };
+		AAA8218A264F3BD90054F728 /* StorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82189264F3BD90054F728 /* StorageHandler.swift */; };
 		B244467F263B425A0009EA7D /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244467E263B425A0009EA7D /* LibraryViewController.swift */; };
 		B26F0D922637622000D3ECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F0D912637622000D3ECF6 /* AppDelegate.swift */; };
 		B26F0D942637622100D3ECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F0D932637622100D3ECF6 /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 		AA7D314F2640977A001A3597 /* GamesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDataModel.swift; sourceTree = "<group>"; };
 		AA7D315226409A40001A3597 /* GameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRequest.swift; sourceTree = "<group>"; };
 		AAA82187264DECB60054F728 /* StatCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCalc.swift; sourceTree = "<group>"; };
+		AAA82189264F3BD90054F728 /* StorageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHandler.swift; sourceTree = "<group>"; };
 		B244467E263B425A0009EA7D /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B26F0D8E2637622000D3ECF6 /* CPSC357-Steam-App-FINAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPSC357-Steam-App-FINAL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26F0D912637622000D3ECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				B29C436F263B827E00D2C053 /* CustomLibraryCell.swift */,
 				B29353BA263B35A900541627 /* CustomCollectionCell.swift */,
 				AAA82187264DECB60054F728 /* StatCalc.swift */,
+				AAA82189264F3BD90054F728 /* StorageHandler.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				B29C4370263B827E00D2C053 /* CustomLibraryCell.swift in Sources */,
 				B26F0D962637622100D3ECF6 /* ViewController.swift in Sources */,
 				B29353BB263B35A900541627 /* CustomCollectionCell.swift in Sources */,
+				AAA8218A264F3BD90054F728 /* StorageHandler.swift in Sources */,
 				B29C4376263B8FCE00D2C053 /* SettingsView.swift in Sources */,
 				B26F0D922637622000D3ECF6 /* AppDelegate.swift in Sources */,
 				B2ECAE632639C9C60003A0C0 /* CustomCell.swift in Sources */,
