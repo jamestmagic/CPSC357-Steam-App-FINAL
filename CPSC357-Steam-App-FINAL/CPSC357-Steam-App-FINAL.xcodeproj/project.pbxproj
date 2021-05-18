@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2886C6C48ECE06A185433587 /* Pods_CPSC357_Steam_App_FINAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18C919A7D75F1994BB5E62A /* Pods_CPSC357_Steam_App_FINAL.framework */; };
 		AA7D31502640977A001A3597 /* GamesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D314F2640977A001A3597 /* GamesDataModel.swift */; };
 		AA7D315326409A40001A3597 /* GameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D315226409A40001A3597 /* GameRequest.swift */; };
 		AAA82188264DECB70054F728 /* StatCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82187264DECB60054F728 /* StatCalc.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AFD201990C79CD0FD79A8BB /* Pods-CPSC357-Steam-App-FINAL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPSC357-Steam-App-FINAL.debug.xcconfig"; path = "Target Support Files/Pods-CPSC357-Steam-App-FINAL/Pods-CPSC357-Steam-App-FINAL.debug.xcconfig"; sourceTree = "<group>"; };
 		AA7D314F2640977A001A3597 /* GamesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDataModel.swift; sourceTree = "<group>"; };
 		AA7D315226409A40001A3597 /* GameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRequest.swift; sourceTree = "<group>"; };
 		AAA82187264DECB60054F728 /* StatCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCalc.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		B29C4372263B8BDC00D2C053 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
 		B29C4375263B8FCE00D2C053 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B2ECAE622639C9C60003A0C0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		F18C919A7D75F1994BB5E62A /* Pods_CPSC357_Steam_App_FINAL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPSC357_Steam_App_FINAL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3F3B8B8010736F866AFD5F /* Pods-CPSC357-Steam-App-FINAL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPSC357-Steam-App-FINAL.release.xcconfig"; path = "Target Support Files/Pods-CPSC357-Steam-App-FINAL/Pods-CPSC357-Steam-App-FINAL.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2886C6C48ECE06A185433587 /* Pods_CPSC357_Steam_App_FINAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,8 @@
 			children = (
 				B26F0D902637622000D3ECF6 /* CPSC357-Steam-App-FINAL */,
 				B26F0D8F2637622000D3ECF6 /* Products */,
+				FB9E229A9DD397D0D0A58BA3 /* Pods */,
+				B39D3D9FC2229A3676D31A77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +112,24 @@
 			path = "CPSC357-Steam-App-FINAL";
 			sourceTree = "<group>";
 		};
+		B39D3D9FC2229A3676D31A77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F18C919A7D75F1994BB5E62A /* Pods_CPSC357_Steam_App_FINAL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB9E229A9DD397D0D0A58BA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AFD201990C79CD0FD79A8BB /* Pods-CPSC357-Steam-App-FINAL.debug.xcconfig */,
+				FC3F3B8B8010736F866AFD5F /* Pods-CPSC357-Steam-App-FINAL.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B26F0DA22637622200D3ECF6 /* Build configuration list for PBXNativeTarget "CPSC357-Steam-App-FINAL" */;
 			buildPhases = (
+				234C335D9821F62618A94D5C /* [CP] Check Pods Manifest.lock */,
 				B26F0D8A2637622000D3ECF6 /* Sources */,
 				B26F0D8B2637622000D3ECF6 /* Frameworks */,
 				B26F0D8C2637622000D3ECF6 /* Resources */,
+				06104C7DECF00E4BA873476D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +196,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06104C7DECF00E4BA873476D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CPSC357-Steam-App-FINAL/Pods-CPSC357-Steam-App-FINAL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CPSC357-Steam-App-FINAL/Pods-CPSC357-Steam-App-FINAL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CPSC357-Steam-App-FINAL/Pods-CPSC357-Steam-App-FINAL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		234C335D9821F62618A94D5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CPSC357-Steam-App-FINAL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B26F0D8A2637622000D3ECF6 /* Sources */ = {
@@ -331,6 +400,7 @@
 		};
 		B26F0DA32637622200D3ECF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AFD201990C79CD0FD79A8BB /* Pods-CPSC357-Steam-App-FINAL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -349,6 +419,7 @@
 		};
 		B26F0DA42637622200D3ECF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC3F3B8B8010736F866AFD5F /* Pods-CPSC357-Steam-App-FINAL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

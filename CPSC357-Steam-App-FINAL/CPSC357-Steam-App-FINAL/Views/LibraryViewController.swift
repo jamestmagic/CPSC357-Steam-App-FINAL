@@ -35,10 +35,22 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     */
+    //var gamesArrayLibrary: [Game] = []
     
-
     
-    let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
+    
+    var gamesArrayLibrary: [Game] {
+        get {
+            return (self.tabBarController!.viewControllers![0] as! ViewController).gamesArray
+        }
+        set {
+            (self.tabBarController!.viewControllers![0] as! ViewController).gamesArray = gamesArrayLibrary
+        }
+    }
+//
+//
+//    var tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
+    var tableRowTitle: [String] = []
     let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
     
     let rowCellReuseID = "cell"
@@ -67,6 +79,15 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         }*/
         
+        
+        
+        createGamesData()
+        setUpRows()
+        
+        
+        
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
         //searchBar.delegate = self
@@ -88,14 +109,10 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         
         let cell:CustomLibraryCell = self.tableView.dequeueReusableCell(withIdentifier: rowCellReuseID) as! CustomLibraryCell
+        cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
+        cell.customLibraryCellLabel.text = self.tableRowTitle[indexPath.row]
         
-        //let game = gameslibrary[indexPath.row]
-        //cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
-        //cell.customLibraryCellLabel.text = game.appid
-        
-        
-        //cell.textLabel?.text = String(game.appid)
-        //cell.detailTextLabel?.text = String(game.playtime_forever)
+       
         return cell
     }
     
@@ -110,7 +127,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
-}
+
 /*
 extension LibraryViewController : UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
@@ -128,3 +145,42 @@ extension LibraryViewController : UISearchBarDelegate {
 }
 */
 
+    func createGamesData(){
+        
+        
+        
+    }
+
+
+    func setUpRows(){
+        for (index, element) in gamesArrayLibrary.enumerated()
+        {
+            let tempGame : Game = element
+            let tempTitle : String = tempGame.gameName
+            tableRowTitle.append(tempTitle)
+            
+            
+            
+        }
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+ 
+        
+        if segue.identifier == "ShowGameLibraryInfo"{
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let tempGame = gamesArrayLibrary[indexPath!.row]
+            let destination = segue.destination as! GameInfoView
+            destination.gameDetail = tempGame
+        }
+        
+      
+    }
+    
+    
+    
+    
+}

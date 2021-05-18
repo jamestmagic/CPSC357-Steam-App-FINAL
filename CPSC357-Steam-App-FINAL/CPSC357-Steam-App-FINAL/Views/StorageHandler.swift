@@ -19,7 +19,7 @@ struct StorageHandler{
     }
     
     //Accesses the stored dictionary
-    static func getStorage() ->   Dictionary<String, Game> {
+    static func getStorage() -> Dictionary<String, Game> {
         if var storedGames = defaultStorage.dictionary(forKey: self.defaultKey) as? [String : Game] {
             return storedGames
         }else{
@@ -28,8 +28,7 @@ struct StorageHandler{
     }
 
     //Accesses the Names for the games stored in Default Storage
-    static func getKeyArray(input: Dictionary<String , Game>) -> [String]
-    {
+    static func getKeyArray(input: Dictionary<String , Game>) -> [String] {
         var newArray : [String] = []
         for key in input.keys{
             newArray.append(key)

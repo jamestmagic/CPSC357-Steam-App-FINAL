@@ -12,4 +12,9 @@ import UIKit
 class CustomCollectionCell : UICollectionViewCell {
     @IBOutlet weak var customLabel: UILabel!
     @IBOutlet weak var customView : UIView!
+
+
+
+
+
 }
