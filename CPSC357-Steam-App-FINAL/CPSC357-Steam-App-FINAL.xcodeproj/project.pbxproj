@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		AAA82188264DECB70054F728 /* StatCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82187264DECB60054F728 /* StatCalc.swift */; };
 		AAA8218A264F3BD90054F728 /* StorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82189264F3BD90054F728 /* StorageHandler.swift */; };
 		B244467F263B425A0009EA7D /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244467E263B425A0009EA7D /* LibraryViewController.swift */; };
+		B250CDB52656EAAA00313AAF /* AddGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250CDB42656EAAA00313AAF /* AddGameView.swift */; };
 		B26F0D922637622000D3ECF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F0D912637622000D3ECF6 /* AppDelegate.swift */; };
 		B26F0D942637622100D3ECF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F0D932637622100D3ECF6 /* SceneDelegate.swift */; };
 		B26F0D962637622100D3ECF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F0D952637622100D3ECF6 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		AAA82187264DECB60054F728 /* StatCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCalc.swift; sourceTree = "<group>"; };
 		AAA82189264F3BD90054F728 /* StorageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHandler.swift; sourceTree = "<group>"; };
 		B244467E263B425A0009EA7D /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		B250CDB42656EAAA00313AAF /* AddGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameView.swift; sourceTree = "<group>"; };
 		B26F0D8E2637622000D3ECF6 /* CPSC357-Steam-App-FINAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPSC357-Steam-App-FINAL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26F0D912637622000D3ECF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B26F0D932637622100D3ECF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				B26F0D952637622100D3ECF6 /* ViewController.swift */,
+				B250CDB42656EAAA00313AAF /* AddGameView.swift */,
 				B244467E263B425A0009EA7D /* LibraryViewController.swift */,
 				B29C4372263B8BDC00D2C053 /* GameInfoView.swift */,
 				B29C4375263B8FCE00D2C053 /* SettingsView.swift */,
@@ -126,7 +129,6 @@
 				0AFD201990C79CD0FD79A8BB /* Pods-CPSC357-Steam-App-FINAL.debug.xcconfig */,
 				FC3F3B8B8010736F866AFD5F /* Pods-CPSC357-Steam-App-FINAL.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -250,6 +252,7 @@
 				B29353BB263B35A900541627 /* CustomCollectionCell.swift in Sources */,
 				AAA8218A264F3BD90054F728 /* StorageHandler.swift in Sources */,
 				B29C4376263B8FCE00D2C053 /* SettingsView.swift in Sources */,
+				B250CDB52656EAAA00313AAF /* AddGameView.swift in Sources */,
 				B26F0D922637622000D3ECF6 /* AppDelegate.swift in Sources */,
 				B2ECAE632639C9C60003A0C0 /* CustomCell.swift in Sources */,
 				B244467F263B425A0009EA7D /* LibraryViewController.swift in Sources */,
