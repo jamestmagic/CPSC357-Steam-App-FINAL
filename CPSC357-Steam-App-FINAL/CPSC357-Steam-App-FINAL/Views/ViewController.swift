@@ -70,6 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         return self.tableRowTitle.count
 
@@ -214,6 +215,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    //Pie Chart
+    //total_playtime
+    //last_month_playtime
+    //last_week_playtime
     
     
     
