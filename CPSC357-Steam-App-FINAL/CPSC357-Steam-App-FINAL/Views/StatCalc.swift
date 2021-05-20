@@ -32,6 +32,7 @@ struct Game{
 
 struct GameLibrary {
     var gamesLibrary : [Game]
+    //var gamesStorage  = StorageHandler()
     
     
     mutating func addTempGames(){
@@ -50,13 +51,13 @@ struct GameLibrary {
 
         
         
-        var Oblivion = Game(gameName: "Oblivion", total_playtime: 100, last_month_playtime: 3, last_week_playtime: 2, date_last_played: date1!, date_added: date2!)
+        let Oblivion = Game(gameName: "Oblivion", total_playtime: 100, last_month_playtime: 3, last_week_playtime: 2, date_last_played: date1!, date_added: date2!)
        
-        var Morrowind = Game(gameName: "Morrowind", total_playtime: 13, last_month_playtime: 4, last_week_playtime: 3, date_last_played: date3!, date_added: date4!)
+        let Morrowind = Game(gameName: "Morrowind", total_playtime: 13, last_month_playtime: 4, last_week_playtime: 3, date_last_played: date3!, date_added: date4!)
        
-        var Portal = Game(gameName: "Portal", total_playtime: 12, last_month_playtime: 5, last_week_playtime: 3, date_last_played: date5!, date_added: date6!)
+        let Portal = Game(gameName: "Portal", total_playtime: 12, last_month_playtime: 5, last_week_playtime: 3, date_last_played: date5!, date_added: date6!)
         
-        var MassEffect = Game(gameName: "MassEffect", total_playtime: 15, last_month_playtime: 5, last_week_playtime: 3, date_last_played: date7!, date_added: date8!)
+        let MassEffect = Game(gameName: "MassEffect", total_playtime: 15, last_month_playtime: 5, last_week_playtime: 3, date_last_played: date7!, date_added: date8!)
         
         gamesLibrary.append(Oblivion)
         gamesLibrary.append(Morrowind)
@@ -65,6 +66,35 @@ struct GameLibrary {
         
         
         
+        
+    }
+    
+    mutating func updateStorage()
+    {
+       // var tempKeys : [String] = []
+       // var gameValues : [Game] = []
+        var gamesDictionary : Dictionary<String, Game> = [:]
+        for (index, element) in gamesLibrary.enumerated(){
+            var tempGame : Game  = element
+            var tempKey = tempGame.gameName
+            
+            gamesDictionary.updateValue(tempGame, forKey: tempKey)
+            
+        }
+        StorageHandler.setStorage(input : gamesDictionary)
+    }
+    mutating func getStorage() -> [Game]
+    {
+       // var tempGamesArray : [Game] = []
+        gamesLibrary = []
+        var gamesDictionary = StorageHandler.getStorage()
+        for value in gamesDictionary.values
+        {
+            gamesLibrary.append(value)
+            
+        }
+        return gamesLibrary
+       
         
     }
     
