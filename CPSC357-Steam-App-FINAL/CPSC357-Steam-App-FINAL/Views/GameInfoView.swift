@@ -26,13 +26,6 @@ class GameInfoView : UIViewController, ChartViewDelegate {
     var gameDetail : Game!
     
     
-    
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpGameInfo()
@@ -77,9 +70,17 @@ class GameInfoView : UIViewController, ChartViewDelegate {
         //lineChart.center = view.center
         //view.view
         
+        
         var ourEntries = [ChartDataEntry]()
         
         //create sample data set
+        
+        
+        //gameDetail.total_playtime
+        //gameDetail.last_week_playtime
+        //x axis starts on date_added and end on current date (var currentDate = Date())
+        //y axis is playtime
+        
         for x in 0..<5 {
             ourEntries.append(ChartDataEntry(x: Double(x), y: Double(x)))
         }
