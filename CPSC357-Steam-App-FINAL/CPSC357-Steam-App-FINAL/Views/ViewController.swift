@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
         tableView.reloadData()
         createGamesData()
-        gamesLibrary.updateStorage(inputArray : gamesArray)
+        gamesLibrary.updateStorage(inputArray: gamesArray)
         gamesArray = gamesLibrary.gamesLibrary
         setUpRows()
         
