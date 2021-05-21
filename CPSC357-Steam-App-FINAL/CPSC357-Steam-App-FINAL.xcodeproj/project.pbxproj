@@ -25,14 +25,6 @@
 		B29C4373263B8BDC00D2C053 /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C4372263B8BDC00D2C053 /* GameInfoView.swift */; };
 		B29C4376263B8FCE00D2C053 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C4375263B8FCE00D2C053 /* SettingsView.swift */; };
 		B2ECAE632639C9C60003A0C0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAE622639C9C60003A0C0 /* CustomCell.swift */; };
-		B2F644D02657695200A7AE08 /* webkinz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644C82657695100A7AE08 /* webkinz.jpg */; };
-		B2F644D12657695200A7AE08 /* elderscrollsonline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644C92657695100A7AE08 /* elderscrollsonline.jpg */; };
-		B2F644D22657695200A7AE08 /* portal2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644CA2657695100A7AE08 /* portal2.jpg */; };
-		B2F644D32657695200A7AE08 /* portal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644CB2657695100A7AE08 /* portal.jpg */; };
-		B2F644D42657695200A7AE08 /* oblivion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644CC2657695100A7AE08 /* oblivion.jpg */; };
-		B2F644D52657695200A7AE08 /* masseffect2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644CD2657695100A7AE08 /* masseffect2.jpg */; };
-		B2F644D62657695200A7AE08 /* morrowind.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644CE2657695100A7AE08 /* morrowind.jpg */; };
-		B2F644D72657695200A7AE08 /* masseffect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F644CF2657695100A7AE08 /* masseffect.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,14 +48,6 @@
 		B29C4372263B8BDC00D2C053 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
 		B29C4375263B8FCE00D2C053 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B2ECAE622639C9C60003A0C0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		B2F644C82657695100A7AE08 /* webkinz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = webkinz.jpg; sourceTree = "<group>"; };
-		B2F644C92657695100A7AE08 /* elderscrollsonline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = elderscrollsonline.jpg; sourceTree = "<group>"; };
-		B2F644CA2657695100A7AE08 /* portal2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portal2.jpg; sourceTree = "<group>"; };
-		B2F644CB2657695100A7AE08 /* portal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portal.jpg; sourceTree = "<group>"; };
-		B2F644CC2657695100A7AE08 /* oblivion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oblivion.jpg; sourceTree = "<group>"; };
-		B2F644CD2657695100A7AE08 /* masseffect2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = masseffect2.jpg; sourceTree = "<group>"; };
-		B2F644CE2657695100A7AE08 /* morrowind.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = morrowind.jpg; sourceTree = "<group>"; };
-		B2F644CF2657695100A7AE08 /* masseffect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = masseffect.jpg; sourceTree = "<group>"; };
 		B2F644F3265777B000A7AE08 /* masseffect2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = masseffect2.jpg; sourceTree = "<group>"; };
 		B2F644F4265777B000A7AE08 /* portal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portal.jpg; sourceTree = "<group>"; };
 		B2F644F5265777B000A7AE08 /* morrowind.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = morrowind.jpg; sourceTree = "<group>"; };
@@ -110,7 +94,6 @@
 		B26F0D852637622000D3ECF6 = {
 			isa = PBXGroup;
 			children = (
-				B2F644C72657695100A7AE08 /* Resources */,
 				B26F0D902637622000D3ECF6 /* CPSC357-Steam-App-FINAL */,
 				B26F0D8F2637622000D3ECF6 /* Products */,
 				FB9E229A9DD397D0D0A58BA3 /* Pods */,
@@ -139,22 +122,6 @@
 				B26F0D9F2637622200D3ECF6 /* Info.plist */,
 			);
 			path = "CPSC357-Steam-App-FINAL";
-			sourceTree = "<group>";
-		};
-		B2F644C72657695100A7AE08 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B2F644C82657695100A7AE08 /* webkinz.jpg */,
-				B2F644C92657695100A7AE08 /* elderscrollsonline.jpg */,
-				B2F644CA2657695100A7AE08 /* portal2.jpg */,
-				B2F644CB2657695100A7AE08 /* portal.jpg */,
-				B2F644CC2657695100A7AE08 /* oblivion.jpg */,
-				B2F644CD2657695100A7AE08 /* masseffect2.jpg */,
-				B2F644CE2657695100A7AE08 /* morrowind.jpg */,
-				B2F644CF2657695100A7AE08 /* masseffect.jpg */,
-			);
-			name = Resources;
-			path = ../../../../Desktop/Resources;
 			sourceTree = "<group>";
 		};
 		B2F644F2265777B000A7AE08 /* Resources */ = {
@@ -248,17 +215,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F644D52657695200A7AE08 /* masseffect2.jpg in Resources */,
-				B2F644D32657695200A7AE08 /* portal.jpg in Resources */,
-				B2F644D72657695200A7AE08 /* masseffect.jpg in Resources */,
-				B2F644D02657695200A7AE08 /* webkinz.jpg in Resources */,
 				B26F0D9E2637622200D3ECF6 /* LaunchScreen.storyboard in Resources */,
-				B2F644D22657695200A7AE08 /* portal2.jpg in Resources */,
-				B2F644D12657695200A7AE08 /* elderscrollsonline.jpg in Resources */,
-				B2F644D42657695200A7AE08 /* oblivion.jpg in Resources */,
 				B26F0D9B2637622200D3ECF6 /* Assets.xcassets in Resources */,
 				B26F0D992637622100D3ECF6 /* Main.storyboard in Resources */,
-				B2F644D62657695200A7AE08 /* morrowind.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
