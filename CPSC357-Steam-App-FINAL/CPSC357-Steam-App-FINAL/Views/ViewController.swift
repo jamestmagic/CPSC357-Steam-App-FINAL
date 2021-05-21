@@ -74,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.customImage.image = newImage
         }
         else {
-            cell.customImage.image = UIImage(named : "webkinz.jpg")
+            cell.customImage.image = UIImage(named : "steam.jpg")
         }
         
         cell.customCellLabel.text = self.tableRowTitle[indexPath.row]
@@ -112,9 +112,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func createGamesData()
     {
         gamesArray = gamesLibrary.getStorage()
+        //gamesArray = []
         if (gamesArray.isEmpty == true) {
             gamesLibrary.addTempGames()
-            gamesLibrary.getStorage()
+            gamesArray = gamesLibrary.getStorage()
         }
         
     }
@@ -150,7 +151,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         pieChart.data = data
         
         data.setValueFont(.systemFont(ofSize: 15, weight: .heavy))
-        data.setValueTextColor(.black)
+        data.setValueTextColor(.white)
         
         pieChart.data = data
         pieChart.highlightValues(nil)

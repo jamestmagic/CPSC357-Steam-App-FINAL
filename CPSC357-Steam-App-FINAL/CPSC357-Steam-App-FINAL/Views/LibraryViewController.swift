@@ -97,7 +97,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.customLibraryImage.image = newImage
         }
         else {
-            cell.customLibraryImage.image = UIImage(named : "webkinz.jpg")
+            cell.customLibraryImage.image = UIImage(named : "steam.jpg")
         }
         
         cell.customLibraryCellLabel.text = self.filteredTitles[indexPath.row]
@@ -136,5 +136,10 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
       
+    }
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
+        
+        
     }
 }
