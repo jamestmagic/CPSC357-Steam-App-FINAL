@@ -194,10 +194,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 tableRowTitle.append(tempTitle)
                 count += 1
             }
-            
-            
-            
         }
+        
         
         
         
@@ -215,7 +213,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
 }
-    
+
     
     
     

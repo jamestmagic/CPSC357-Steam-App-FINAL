@@ -4,7 +4,7 @@
 //
 //  Created by cpsc on 5/3/21.
 //
-
+/*
 import Foundation
 
 struct GameResponse: Decodable{
@@ -24,3 +24,4 @@ struct GamesDetail: Decodable{
     var playtime_linux_forever: Int
     
 }
+*/
