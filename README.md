@@ -43,5 +43,6 @@ To Run the app with XCode :
 2. You will need to launch the app through the workspace file instead of the project file
 
 
-
+Known Issues : 
+Entering anything other than an int into the total playtime textfeild in the Add Game page in settings might cause the app to crash. 
 
