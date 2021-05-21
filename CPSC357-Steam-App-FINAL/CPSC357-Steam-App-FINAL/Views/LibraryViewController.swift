@@ -10,7 +10,7 @@ import UIKit
 
 
 
-
+//View for the library of games
 class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
    
 
@@ -25,21 +25,10 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var testLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
-    /*
-    var gameslibrary = [GamesLibrary](){
-        didSet{
-            DispatchQueue.main.async{
-                self.tableView.reloadData()
-                //self.navigationItem.title = "\(self.gameslibrary.count) Games Found"
-            }
-        }
-    }
-    
-    */
-    //var gamesArrayLibrary: [Game] = []
-    
     
     let searchController = UISearchController()
+    
+    //Game array set to the pre-loaded array in the ViewController
     var gamesArrayLibrary: [Game] {
         get {
             return (self.tabBarController!.viewControllers![0] as! ViewController).gamesArray
@@ -49,60 +38,27 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-//
-//
-//    var tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
+
     var tableRowTitle: [String] = []
     var filteredLibrary : [Game] = []
     var filteredTitles: [String] = []
-   // let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red, UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
-    
     let rowCellReuseID = "cell"
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //initSearchContoller()
-        // Do any additional setup after loading the view.
-       // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
-        /*let gameRequest = GameRequest(steamID64: "76561198184936923")
-        gameRequest.getGames { [weak self] result in
-            switch result{
-            case.failure(let error):
-                print("ERROR")
-                print(error)
-            case.success(let games):
-                self?.gameslibrary = games
-            }
-        }
-        for game in gameslibrary {
-            print("Game ID: \(game.games[5].appid)")
-//            print("Game ID: \(game.name)")
-            testLabel.text = ("Game ID: \(game.games[5].appid)")
-        
-            
-        }*/
-        
-        
-       // initsearchBar
-        createGamesData()
+        //initalize data
         setUpRows()
         filteredTitles = tableRowTitle
-        
-        
         
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        //searchBar.delegate = self
-        
-        
-        //view.backgroundColor = .blue
     }
     
 
-    
+    //Search Bar to filter game library
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredTitles = []
         if searchText == ""
@@ -126,12 +82,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
 //    //reference : https://www.youtube.com/watch?v=DAHG0orOxKo&ab_channel=CodeWithCal
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
-        
-    
-       // return self.tableRowTitle.count
         return self.filteredTitles.count
-
-
     }
 
     
@@ -139,18 +90,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         
         let cell:CustomLibraryCell = self.tableView.dequeueReusableCell(withIdentifier: rowCellReuseID) as! CustomLibraryCell
-        
-//        let searchedGames : Game!
-//        if (searchController.isActive)
-//        {
-//            searchedGames = filteredLibrary[indexPath.row]
-//        }
-//        else {
-//            searchedGames = gamesArrayLibrary[indexPath.row]
-//        }
-//
-//
-        
+
         var imageName = self.filteredTitles[indexPath.row].lowercased()
         imageName.append(".jpg")
         if let newImage = UIImage(named : imageName){
@@ -160,7 +100,6 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.customLibraryImage.image = UIImage(named : "webkinz.jpg")
         }
         
-       // cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
         cell.customLibraryCellLabel.text = self.filteredTitles[indexPath.row]
         
        
@@ -168,50 +107,18 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //action when button is tapped
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print ("selected row : \(indexPath.row)")
     }
     
-    
-    
-    
-    
-
-/*
-extension LibraryViewController : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-        guard let searchBarText = searchBar.text else {return}
-        let gameRequest = GameRequest(steamID64: "76561198184936923")
-        gameRequest.getGames {[weak self] result in
-            switch result{
-            case .failure(let error):
-                print(error)
-            case .success(let games):
-                self?.gameslibrary = games
-            }
-        }
-    }
-}
-*/
-
-    func createGamesData(){
-        
-        
-        
-    }
-
-
+    //creates rows for each game in gamesArrayLibrary
     func setUpRows(){
         for (index, element) in gamesArrayLibrary.enumerated()
         {
             let tempGame : Game = element
             let tempTitle : String = tempGame.gameName
             tableRowTitle.append(tempTitle)
-            
-            
-            
         }
         
     }
@@ -230,8 +137,4 @@ extension LibraryViewController : UISearchBarDelegate {
         
       
     }
-    
-    
-    
-    
 }

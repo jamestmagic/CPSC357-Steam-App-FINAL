@@ -8,13 +8,9 @@
 
 import UIKit
 
-
+//Creates a custom cell for collection purposes
 class CustomCollectionCell : UICollectionViewCell {
     @IBOutlet weak var customLabel: UILabel!
     @IBOutlet weak var customView : UIView!
-
-
-
-
 
 }

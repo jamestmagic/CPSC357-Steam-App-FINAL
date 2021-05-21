@@ -9,20 +9,11 @@ import UIKit
 
 import UIKit
 
-//We can add more to this cell later
+//Creates a custom Library cell for the Library View
 class CustomLibraryCell: UITableViewCell {
-    
-    
-    
+
     @IBOutlet weak var customLibraryImage: UIImageView!
-    // @IBOutlet weak var customLibraryView: UIView!
     @IBOutlet weak var customLibraryCellLabel : UILabel!
-    
-    
-    
-    
-    
-    
     
 }
 

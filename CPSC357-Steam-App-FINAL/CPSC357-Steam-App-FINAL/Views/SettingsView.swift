@@ -9,7 +9,7 @@ import UIKit
 
 
 
-
+//View that allows for options such as Adding a Game
  class SettingsView: UIViewController {
 
     @IBOutlet weak var settingsViewController: UIView!
@@ -22,20 +22,9 @@ import UIKit
     var gamesArray : [Game]!
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-       // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
-    
-        
-        //view.backgroundColor = .blue
     }
-    
-    
-    
-    
 }
 
 

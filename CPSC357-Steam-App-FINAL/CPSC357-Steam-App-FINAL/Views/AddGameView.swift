@@ -9,23 +9,14 @@ import Foundation
 import UIKit
 
 
-
+//View to add a game to the library
 class AddGameView: UIViewController{
     
-    
-//    var gamesArrayLibrary: [Game] {
-//        get {
-//            return (self.tabBarController!.viewControllers![0] as! ViewController).gamesArray
-//        }
-//        set {
-//            (self.tabBarController!.viewControllers![0] as! ViewController).gamesArray = gamesArrayLibrary
-//        }
-//    }
+    //Main Game Structures
     var gamesArrayLibrary = GameLibrary(gamesLibrary: [])
     var gamesArray : [Game] = []
     
-    
-    //var viewC : ViewController
+
     @IBOutlet weak var userTextFeild: UITextField!
     @IBOutlet weak var userIntFeild: UITextField!
     
@@ -34,24 +25,13 @@ class AddGameView: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         createGamesData()
-        
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//
-//
-//        viewC.gamesArray = viewC.gamesLibrary.getStorage()
-//
-//
-//    }
-    
-    
+    //Adds new Game to gamesArrayLibrary and updates StorageHandler
     func addGame(name: String, total: Int){
         var tempGame: Game = Game(gameName: name, total_playtime: total, last_month_playtime: 0, last_week_playtime: 0, date_last_played: Date(), date_added: Date())
         gamesArray.append(tempGame)
         gamesArrayLibrary.updateStorage(inputArray: gamesArray)
-       
-        
     }
     
     @IBAction func buttonPress(_ sender: Any) {
@@ -65,19 +45,9 @@ class AddGameView: UIViewController{
     }
     
     
-    
-    
+    //Loads data from Storage handler
     func createGamesData()
     {
-        //gamesLibrary.addTempGames()
-        //gamesLibrary.updateStorage()
         gamesArray = gamesArrayLibrary.getStorage()
-//        if (gamesArray.isEmpty == true) {
-//            gamesArrayLibrary.addTempGames()
-//            gamesArrayLibrary.getStorage()
-//        }
-        
     }
-    
-    
 }

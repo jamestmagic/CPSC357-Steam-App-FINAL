@@ -1,4 +1,7 @@
-//
+//NOTE: This file was meant for creating the structure for the Steam API JSON Data. Due to difficulties with the Steam API, we have decided to opt out of using the API. This file and its elements are not in use for this app.
+
+
+
 //  GamesDataModel.swift
 //  CPSC357-Steam-App-FINAL
 //
