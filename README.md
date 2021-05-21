@@ -47,5 +47,6 @@ pod deintegrate && pod install
 More information can be found here : https://stackoverflow.com/questions/64911591/not-able-to-open-and-run-on-the-simulator-my-xcworkspace-project
 
 
-
+Known Issues : 
+Entering anything other than an int into the total playtime textfeild in the Add Game page in settings might cause the app to crash. 
 
