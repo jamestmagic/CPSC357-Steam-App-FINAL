@@ -30,7 +30,10 @@ struct Game : Codable{
     
     func weeklyPlaytime() -> [Int]{
         let components = Calendar.current.dateComponents([.weekOfYear], from: date_added, to: Date())
-        let weeklyHours = Array<Int>(repeating: 0, count: components.weekOfYear!)
+        var weeklyHours = Array<Int>(repeating: 0, count: components.weekOfYear!)
+        for week in weeklyHours.indices {
+            weeklyHours[week] = Int.random(in:1..<100)
+        }
         return weeklyHours
     }
 }
