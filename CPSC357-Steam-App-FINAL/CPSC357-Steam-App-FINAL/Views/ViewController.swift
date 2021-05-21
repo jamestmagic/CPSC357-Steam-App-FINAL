@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //gamesLibrary.getStorage()
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
         createGamesData()
-        gamesLibrary.updateStorage(inputArray : gamesArray)
+        gamesLibrary.updateStorage(inputArray: gamesArray)
         gamesArray = gamesLibrary.gamesLibrary
         setUpRows()
         
