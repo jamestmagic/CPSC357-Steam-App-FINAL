@@ -87,11 +87,12 @@ struct GameLibrary {
         
     }
     
-    mutating func updateStorage()
+    mutating func updateStorage(inputArray : [Game])
     {
        // var tempKeys : [String] = []
        // var gameValues : [Game] = []
         //var gamesDictionary : Dictionary<String, Game> = [:]
+        self.gamesLibrary = inputArray
         var tempArray : [Game] = []
         for (index, element) in self.gamesLibrary.enumerated(){
             var tempGame : Game  = element
@@ -101,7 +102,7 @@ struct GameLibrary {
             
         }
         gamesStorage.setStorage(input : tempArray)
-        print("GOT HERE ")
+       // print("GOT HERE ")
     }
     mutating func getStorage() -> [Game]
     {

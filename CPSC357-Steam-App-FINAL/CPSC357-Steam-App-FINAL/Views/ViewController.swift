@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //gamesLibrary.getStorage()
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
         createGamesData()
-        gamesLibrary.updateStorage()
+        gamesLibrary.updateStorage(inputArray : gamesArray)
         gamesArray = gamesLibrary.gamesLibrary
         setUpRows()
         
@@ -147,6 +147,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier == "Settings"{
            // let indexPath = self.tableView.indexPathForSelectedRow
             //let tempGame = gamesArray[indexPath!.row]
+            
+            gamesLibrary.updateStorage(inputArray: gamesArray)
             let destination = segue.destination as! SettingsView
             destination.gamesArray = gamesArray
             destination.gamesLibrary = gamesLibrary
@@ -167,6 +169,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func createGamesData()
     {
         //gamesLibrary.addTempGames()
+        //gamesLibrary.updateStorage()
         gamesArray = gamesLibrary.getStorage()
         if (gamesArray.isEmpty == true) {
             gamesLibrary.addTempGames()
