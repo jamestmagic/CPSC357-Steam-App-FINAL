@@ -55,7 +55,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     var tableRowTitle: [String] = []
     var filteredLibrary : [Game] = []
     var filteredTitles: [String] = []
-    let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
+    let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red, UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
     
     let rowCellReuseID = "cell"
     

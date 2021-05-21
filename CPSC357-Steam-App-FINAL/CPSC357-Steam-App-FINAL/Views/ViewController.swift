@@ -41,6 +41,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var gamesLibrary = GameLibrary(gamesLibrary: [])
     var gamesArray : [Game] = []
     
+    
+    var filteredGamesArray : [Game] = []
 //    let formatter = DateFormatter()
 //    formatter.dateFormat = "yyyy/MM/dd HH"
 //    let date1 = formatter.date(from: "2016/10/08 15")
@@ -53,7 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var tableRowTitle: [String] = []
     
 //    let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
-    let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
+    let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red, UIColor.orange]
     let collectionViewTitle : [String] = ["Playtime this week", "Total Playtime"]
     let rowCellReuseID = "cell"
 //    let collectionCellReuseID = "cell"
@@ -157,15 +159,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //--------------------------------------------------
     func setUpRows(){
         
+        var count : Int = 0
+        
+        
+        
+        
+        gamesArray =  gamesArray.sorted(by: {$0.last_month_playtime < $1.last_month_playtime})
+        
         for (index, element) in gamesArray.enumerated()
         {
             let tempGame : Game = element
-            let tempTitle : String = tempGame.gameName
-            tableRowTitle.append(tempTitle)
+            
+            if count < 5 {
+                let tempTitle : String = tempGame.gameName
+                tableRowTitle.append(tempTitle)
+                count += 1
+            }
             
             
             
         }
+        
+        
+        
+//        for (index, element) in gamesArray.enumerated()
+//        {
+//            let tempGame : Game = element
+//            let tempTitle : String = tempGame.gameName
+//            tableRowTitle.append(tempTitle)
+//
+//
+//
+//        }
+//
     
         
     }

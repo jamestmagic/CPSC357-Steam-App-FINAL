@@ -48,7 +48,10 @@ struct GameLibrary {
         let date6 = formatter.date(from: "2019/03/10 3")
         let date7 = formatter.date(from: "2020/02/03 8")
         let date8 = formatter.date(from: "2019/03/21 3")
-
+        let date9 = formatter.date(from: "2015/02/03 3")
+        let date10 = formatter.date(from: "2015/03/21 3")
+        let date11 = formatter.date(from: "2018/07/03 3")
+        let date12 = formatter.date(from: "2020/04/21 3")
         
         
         let Oblivion = Game(gameName: "Oblivion", total_playtime: 100, last_month_playtime: 3, last_week_playtime: 2, date_last_played: date1!, date_added: date2!)
@@ -59,10 +62,16 @@ struct GameLibrary {
         
         let MassEffect = Game(gameName: "MassEffect", total_playtime: 15, last_month_playtime: 5, last_week_playtime: 3, date_last_played: date7!, date_added: date8!)
         
+        let Portal2 = Game(gameName: "Portal2", total_playtime: 10, last_month_playtime: 2, last_week_playtime: 1, date_last_played: date9!, date_added: date10!)
+     
+        let ElderScrollsOnline = Game(gameName: "ElderScrollsOnline", total_playtime: 50, last_month_playtime: 13, last_week_playtime: 4, date_last_played: date11!, date_added: date12!)
+        
         gamesLibrary.append(Oblivion)
         gamesLibrary.append(Morrowind)
         gamesLibrary.append(Portal)
         gamesLibrary.append(MassEffect)
+        gamesLibrary.append(Portal2)
+        gamesLibrary.append(ElderScrollsOnline)
         
         
         
