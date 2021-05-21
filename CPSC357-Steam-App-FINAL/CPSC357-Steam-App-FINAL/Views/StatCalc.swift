@@ -27,6 +27,12 @@ struct Game{
         guard let hours = diffComponents.hour else { return 0 }
         return (hours)
     }
+    
+    func weeklyPlaytime() -> [Int]{
+        let components = Calendar.current.dateComponents([.weekOfYear], from: date_added, to: Date())
+        let weeklyHours = Array<Int>(repeating: 0, count: components.weekOfYear!)
+        return weeklyHours
+    }
 }
 
 
