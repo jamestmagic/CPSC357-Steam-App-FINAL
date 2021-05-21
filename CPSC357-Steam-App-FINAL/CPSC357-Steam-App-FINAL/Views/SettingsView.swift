@@ -18,6 +18,8 @@ import UIKit
     
     
     
+    var gamesLibrary = GameLibrary(gamesLibrary: [])
+    var gamesArray : [Game]!
     
     
     

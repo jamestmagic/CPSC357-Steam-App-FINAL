@@ -144,6 +144,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             destination.gameDetail = tempGame
         }
         
+        if segue.identifier == "Settings"{
+           // let indexPath = self.tableView.indexPathForSelectedRow
+            //let tempGame = gamesArray[indexPath!.row]
+            let destination = segue.destination as! SettingsView
+            destination.gamesArray = gamesArray
+            destination.gamesLibrary = gamesLibrary
+        }
+        
+        
 //
 //        let indexPath = self.tableView.indexPathForSelectedRow
 //        let tempGame = gamesArray[indexPath!.row]
