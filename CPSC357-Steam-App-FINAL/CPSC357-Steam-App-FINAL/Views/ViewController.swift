@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     //@IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pieChart: PieChartView!
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
         super.viewDidLoad()
@@ -77,7 +78,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
        
-        
+        pieChart.delegate = self
+        piechartView()
     }
     
 //    override func viewWillAppear() {
@@ -222,6 +224,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        }
 //
     
+        
+    }
+    func piechartView() {
+        pieChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
+
+        var entrySlices = [PieChartDataEntry]()
+        
+        //array of the games and access their total time played
+        for x in gamesArray.indices {
+            entrySlices.append(PieChartDataEntry(value: Double(gamesArray[x].total_playtime), label: gamesArray[x].gameName))
+        }
+
+        let dataSet = PieChartDataSet(entries: entrySlices)
+        dataSet.colors = ChartColorTemplates.joyful() //color theme
+        
+        let data = PieChartData(dataSet: dataSet)
+        pieChart.data = data
+        
+        data.setValueFont(.systemFont(ofSize: 15, weight: .heavy))
+        data.setValueTextColor(.black)
+        
+        pieChart.data = data
+        pieChart.highlightValues(nil)
         
     }
 }
