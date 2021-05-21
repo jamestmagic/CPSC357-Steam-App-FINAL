@@ -41,6 +41,10 @@ Sources:
 To Run the app with XCode : 
 1. You will need cocoapods installed in your project folder 
 2. You will need to launch the app through the workspace file instead of the project file
+3. If the simulator is not showing when the app builds, you need to run in your command line in your project folder  : 
+pod deintegrate && pod install
+
+More information can be found here : https://stackoverflow.com/questions/64911591/not-able-to-open-and-run-on-the-simulator-my-xcworkspace-project
 
 
 
