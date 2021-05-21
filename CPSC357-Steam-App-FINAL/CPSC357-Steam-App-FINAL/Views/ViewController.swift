@@ -55,14 +55,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var tableRowTitle: [String] = []
     
 //    let tableRowTitle: [String] = ["Game01", "Game02", "Game03", "Game04"]
-    let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red, UIColor.orange]
+    //let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red, UIColor.orange]
     let collectionViewTitle : [String] = ["Playtime this week", "Total Playtime"]
     let rowCellReuseID = "cell"
 //    let collectionCellReuseID = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gamesLibrary.getStorage()
+        //gamesLibrary.getStorage()
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
         createGamesData()
         gamesLibrary.updateStorage()
@@ -87,7 +87,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell:CustomCell = self.tableView.dequeueReusableCell(withIdentifier: rowCellReuseID) as! CustomCell
         
-        cell.customView.backgroundColor = self.gameImage[indexPath.row]
+        //cell.customView.backgroundColor = self.gameImage[indexPath.row]
+        
+        var imageName = self.tableRowTitle[indexPath.row].lowercased()
+        imageName.append(".jpg")
+        if let newImage = UIImage(named : imageName){
+            cell.customImage.image = newImage
+        }
+        else {
+            cell.customImage.image = UIImage(named : "webkinz.jpg")
+        }
+        
+        
         cell.customCellLabel.text = self.tableRowTitle[indexPath.row]
         //cell.textLabel?.text = self.tableRowTitle[indexPath.row]
         
@@ -128,7 +139,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if segue.identifier == "ShowGameInfo"{
             let indexPath = self.tableView.indexPathForSelectedRow
-            let tempGame = gamesLibrary.gamesLibrary[indexPath!.row]
+            let tempGame = gamesArray[indexPath!.row]
             let destination = segue.destination as! GameInfoView
             destination.gameDetail = tempGame
         }
@@ -146,7 +157,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func createGamesData()
     {
-        gamesLibrary.addTempGames()
+        //gamesLibrary.addTempGames()
+        gamesArray = gamesLibrary.getStorage()
+        if (gamesArray.isEmpty == true) {
+            gamesLibrary.addTempGames()
+            gamesLibrary.getStorage()
+        }
         
     }
     
@@ -158,9 +174,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         
-        gamesArray =  gamesLibrary.sorted(by: {$0.last_month_playtime < $1.last_month_playtime})
+        gamesArray =  gamesArray.sorted(by: {$0.last_month_playtime < $1.last_month_playtime})
         
-        for (index, element) in gamesLibrary.gamesLibrary.enumerated()
+        for (index, element) in gamesArray.enumerated()
         {
             let tempGame : Game = element
             

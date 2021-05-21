@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Game{
+struct Game : Codable{
     var gameName: String //name of the game
     var total_playtime: Int //how many hours were played by user in total
     var last_month_playtime: Int //how many hours were played by user within the last month
@@ -38,7 +38,7 @@ struct Game{
 
 struct GameLibrary {
     var gamesLibrary : [Game]
-    //var gamesStorage  = StorageHandler()
+    var gamesStorage  = StorageHandler()
     
     
     mutating func addTempGames(){
@@ -79,8 +79,8 @@ struct GameLibrary {
         gamesLibrary.append(Portal2)
         gamesLibrary.append(ElderScrollsOnline)
         
-        
-        
+      //  updateStorage()
+        gamesStorage.setStorage(input : gamesLibrary)
         
     }
     
@@ -88,26 +88,28 @@ struct GameLibrary {
     {
        // var tempKeys : [String] = []
        // var gameValues : [Game] = []
-        var gamesDictionary : Dictionary<String, Game> = [:]
-        for (index, element) in gamesLibrary.enumerated(){
+        //var gamesDictionary : Dictionary<String, Game> = [:]
+        var tempArray : [Game] = []
+        for (index, element) in self.gamesLibrary.enumerated(){
             var tempGame : Game  = element
-            var tempKey = tempGame.gameName
+           // var tempKey = tempGame.gameName
             
-            gamesDictionary.updateValue(tempGame, forKey: tempKey)
+            tempArray.append(tempGame)
             
         }
-        StorageHandler.setStorage(input : gamesDictionary)
+        gamesStorage.setStorage(input : tempArray)
+        print("GOT HERE ")
     }
     mutating func getStorage() -> [Game]
     {
        // var tempGamesArray : [Game] = []
         gamesLibrary = []
-        var gamesDictionary = StorageHandler.getStorage()
-        for value in gamesDictionary.values
-        {
-            gamesLibrary.append(value)
-            
-        }
+        gamesLibrary = gamesStorage.getStorage()
+//        for value in gamesDictionary.values
+//        {
+//            gamesLibrary.append(value)
+//
+//        }
         return gamesLibrary
        
         

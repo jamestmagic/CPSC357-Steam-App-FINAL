@@ -9,7 +9,8 @@ import UIKit
 
 //We can add more to this cell later
 class CustomCell: UITableViewCell {
-    @IBOutlet weak var customView: UIView!
+    //@IBOutlet weak var customView: UIView!
+    @IBOutlet weak var customImage: UIImageView!
     @IBOutlet weak var customCellLabel: UILabel!
 }
 
