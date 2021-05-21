@@ -14,7 +14,8 @@ class CustomLibraryCell: UITableViewCell {
     
     
     
-    @IBOutlet weak var customLibraryView: UIView!
+    @IBOutlet weak var customLibraryImage: UIImageView!
+    // @IBOutlet weak var customLibraryView: UIView!
     @IBOutlet weak var customLibraryCellLabel : UILabel!
     
     

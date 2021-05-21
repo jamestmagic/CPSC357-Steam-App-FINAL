@@ -55,7 +55,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     var tableRowTitle: [String] = []
     var filteredLibrary : [Game] = []
     var filteredTitles: [String] = []
-    let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red, UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
+   // let gameImage = [UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red, UIColor.blue, UIColor.yellow, UIColor.green, UIColor.red]
     
     let rowCellReuseID = "cell"
     
@@ -151,8 +151,16 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
 //
 //
         
+        var imageName = self.filteredTitles[indexPath.row].lowercased()
+        imageName.append(".jpg")
+        if let newImage = UIImage(named : imageName){
+            cell.customLibraryImage.image = newImage
+        }
+        else {
+            cell.customLibraryImage.image = UIImage(named : "webkinz.jpg")
+        }
         
-        cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
+       // cell.customLibraryView.backgroundColor = self.gameImage[indexPath.row]
         cell.customLibraryCellLabel.text = self.filteredTitles[indexPath.row]
         
        
