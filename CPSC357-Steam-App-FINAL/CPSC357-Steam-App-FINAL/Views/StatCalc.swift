@@ -28,13 +28,13 @@ struct Game : Codable{
         return (hours)
     }
     
-    func weeklyPlaytime() -> [Int]{
-        let components = Calendar.current.dateComponents([.weekOfYear], from: date_added, to: Date())
-        var weeklyHours = Array<Int>(repeating: 0, count: components.weekOfYear!)
-        for week in weeklyHours.indices {
-            weeklyHours[week] = Int.random(in:1..<100)
+    func monthPlaytime() -> [Int]{
+        let components = Calendar.current.dateComponents([.month], from: date_added, to: Date())
+        var monthlyHours = Array<Int>(repeating: 0, count: components.month!)
+        for month in monthlyHours.indices {
+            monthlyHours[month] = Int.random(in:1..<100)
         }
-        return weeklyHours
+        return monthlyHours
     }
 }
 

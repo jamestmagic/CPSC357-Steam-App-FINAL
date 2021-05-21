@@ -81,8 +81,16 @@ class GameInfoView : UIViewController, ChartViewDelegate {
         //x axis starts on date_added and end on current date (var currentDate = Date())
         //y axis is playtime
         
-        for x in 0..<5 {
-            ourEntries.append(ChartDataEntry(x: Double(x), y: Double(x)))
+//        for x in 0..<5 {
+//            ourEntries.append(ChartDataEntry(x: Double(x), y: Double(x)))
+//        }
+        
+        let tempMonthlyPlaytime = [Int] (gameDetail.monthPlaytime())
+        
+        //for each week add the time played to the linechart data entries
+        for x in tempMonthlyPlaytime.indices {
+            ourEntries.append(ChartDataEntry(x: Double(x), y: Double(tempMonthlyPlaytime[x])))
+            print(x)
         }
         
         let ourDataSet = LineChartDataSet(entries: ourEntries)
