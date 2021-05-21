@@ -29,7 +29,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //@IBOutlet weak var collectionView: UICollectionView!
     
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){}
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
+        super.viewDidLoad()
+        createGamesData()
+        
+    }
 
     
     //--------------------------------------------------
@@ -64,6 +68,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         //gamesLibrary.getStorage()
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
+        tableView.reloadData()
         createGamesData()
         gamesLibrary.updateStorage(inputArray : gamesArray)
         gamesArray = gamesLibrary.gamesLibrary
@@ -75,7 +80,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    
+//    override func viewWillAppear() {
+//        ViewController.reloadData()
+//        gamesArray = gamesLibrary.getStorage()
+//    }
+//
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         return self.tableRowTitle.count

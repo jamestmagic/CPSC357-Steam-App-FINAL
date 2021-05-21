@@ -24,6 +24,8 @@ class AddGameView: UIViewController{
     var gamesArrayLibrary = GameLibrary(gamesLibrary: [])
     var gamesArray : [Game] = []
     
+    
+    //var viewC : ViewController
     @IBOutlet weak var userTextFeild: UITextField!
     @IBOutlet weak var userIntFeild: UITextField!
     
@@ -35,12 +37,20 @@ class AddGameView: UIViewController{
         
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//
+//        viewC.gamesArray = viewC.gamesLibrary.getStorage()
+//
+//
+//    }
     
     
     func addGame(name: String, total: Int){
         var tempGame: Game = Game(gameName: name, total_playtime: total, last_month_playtime: 0, last_week_playtime: 0, date_last_played: Date(), date_added: Date())
         gamesArray.append(tempGame)
         gamesArrayLibrary.updateStorage(inputArray: gamesArray)
+       
         
     }
     
