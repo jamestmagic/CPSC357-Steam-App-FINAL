@@ -62,8 +62,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gamesLibrary.getStorage()
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseID )
         createGamesData()
+        gamesLibrary.updateStorage()
+        gamesArray = gamesLibrary.gamesLibrary
         setUpRows()
         
         tableView.delegate = self
@@ -125,7 +128,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if segue.identifier == "ShowGameInfo"{
             let indexPath = self.tableView.indexPathForSelectedRow
-            let tempGame = gamesArray[indexPath!.row]
+            let tempGame = gamesLibrary.gamesLibrary[indexPath!.row]
             let destination = segue.destination as! GameInfoView
             destination.gameDetail = tempGame
         }
@@ -144,15 +147,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func createGamesData()
     {
         gamesLibrary.addTempGames()
-        for (index, element) in gamesLibrary.gamesLibrary.enumerated()
-        {
-            let tempGame : Game = element
-            gamesArray.append(tempGame)
-            
-            
-            
-        }
-    
         
     }
     
@@ -164,9 +158,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         
-        gamesArray =  gamesArray.sorted(by: {$0.last_month_playtime < $1.last_month_playtime})
+        gamesArray =  gamesLibrary.sorted(by: {$0.last_month_playtime < $1.last_month_playtime})
         
-        for (index, element) in gamesArray.enumerated()
+        for (index, element) in gamesLibrary.gamesLibrary.enumerated()
         {
             let tempGame : Game = element
             
